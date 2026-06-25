@@ -1,7 +1,3 @@
-# Secrets
-.env
-*.env
-
 # Python
 __pycache__/
 *.py[cod]
@@ -15,15 +11,20 @@ build/
 venv/
 env/
 
+# Secrets
+.env
+*.env
+
 # IDE / Cursor
 .vscode/
 .cursorindexingignore
-.specstory/
 
-# Session artefacts
+# Session / workspace artefacts
 session-backup.jsonl
 skills-lock.json
-
-# Transcripts (not harness code)
 AI_transcript_*.md
 report-transcript.md
+practice1/
+redteam/
+report.md
+plan.md

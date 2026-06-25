@@ -1,0 +1,9 @@
+# Local secrets and generated data -- never commit
+.red-team/
+.env
+data/
+scripts/config.yaml
+
+# Python
+__pycache__/
+*.pyc

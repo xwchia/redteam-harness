@@ -1,0 +1,22 @@
+# Optional, heavier AI red-team frameworks referenced by AI_redteaming_tool.md.
+# Installed only with --frameworks. The setup script installs these one-by-one and
+# tolerates individual failures, since some pin Python <=3.12 or change PyPI names.
+# Verify the exact package name if an install fails.
+
+# NVIDIA Garak - LLM vulnerability scanner (CLI: python -m garak ...)
+garak
+
+# Confident AI DeepTeam - OWASP LLM Top 10 baseline red teaming
+deepteam
+
+# Microsoft PyRIT - multi-turn / multimodal orchestration (Crescendo, TAP, PAIR)
+pyrit
+
+# vLLM - serves a local judge model (e.g. Llama Guard 3-1B) for the redteam-campaign
+# evaluator. Heavy and GPU-oriented; the one-at-a-time installer tolerates failure on
+# machines without a compatible GPU/CUDA build.
+vllm
+huggingface_hub
+
+# Note: Promptfoo is a Node tool, not a pip package. Run it with:
+#   npx promptfoo@latest redteam run

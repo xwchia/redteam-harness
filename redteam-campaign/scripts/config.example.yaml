@@ -1,0 +1,27 @@
+# Example campaign config. Copy to redteam/campaigns/config.yaml (or .json) and edit.
+# PyYAML is optional; if it is not installed, pass an equivalent JSON file instead.
+
+# Target model identifier passed to the client wrapper.
+model: your-model-id
+
+# Threat categories to attack this run (subset of the pipeline's four).
+categories:
+  - harmful_content
+  - pii_leakage
+  - prompt_injection
+  - backdoor
+
+# Technique names to sweep (must match keys in run_campaign.py TECHNIQUES).
+techniques:
+  - plain
+  - persona
+  - refusal_suppression
+  - instruction_priority
+  - decomposition
+  - iterative_refinement
+
+# Refinement depth per behavior on near-misses.
+budget: 2
+
+# Conservative starting concurrency; raise until rate-limit errors appear, then back off.
+concurrency: 4
